@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/CS_236_Project_4.dir/AddAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/BlockCommentAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/ColonAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/ColonDashAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/CommaAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Database.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/DatalogProgram.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/FactsAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Header.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/IdAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Interpreter.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/LeftParenAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Lexer.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/LineCommentAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/MultiplyAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Parameter.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Parser.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/PeriodAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Predicate.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/QMarkAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/QueriesAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Relation.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/RightParenAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Rule.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/RulesAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/SchemesAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/StringAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Token.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/Tuple.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/UndefinedBlockCommentAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/UndefinedStringAutomaton.cpp.obj"
+  "CMakeFiles/CS_236_Project_4.dir/main.cpp.obj"
+  "CS_236_Project_4.exe"
+  "CS_236_Project_4.exe.manifest"
+  "CS_236_Project_4.pdb"
+  "libCS_236_Project_4.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/CS_236_Project_4.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

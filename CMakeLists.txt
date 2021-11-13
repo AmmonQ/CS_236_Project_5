@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.16)
+project(CS_236_Project_4)
+
+include_directories(.)
+
+add_executable(CS_236_Project_4
+        Automaton.h
+        ColonAutomaton.cpp
+        ColonAutomaton.h
+        ColonDashAutomaton.cpp
+        ColonDashAutomaton.h
+        Lexer.cpp
+        Lexer.h
+        Token.cpp
+        Token.h
+        main.cpp PeriodAutomaton.cpp PeriodAutomaton.h CommaAutomaton.cpp CommaAutomaton.h QMarkAutomaton.cpp QMarkAutomaton.h LeftParenAutomaton.cpp LeftParenAutomaton.h RightParenAutomaton.cpp RightParenAutomaton.h MultiplyAutomaton.cpp MultiplyAutomaton.h AddAutomaton.cpp AddAutomaton.h SchemesAutomaton.cpp SchemesAutomaton.h FactsAutomaton.cpp FactsAutomaton.h RulesAutomaton.cpp RulesAutomaton.h QueriesAutomaton.cpp QueriesAutomaton.h IdAutomaton.cpp IdAutomaton.h StringAutomaton.cpp StringAutomaton.h LineCommentAutomaton.cpp LineCommentAutomaton.h BlockCommentAutomaton.cpp BlockCommentAutomaton.h UndefinedStringAutomaton.cpp UndefinedStringAutomaton.h UndefinedBlockCommentAutomaton.cpp UndefinedBlockCommentAutomaton.h Parser.cpp Parser.h DatalogProgram.cpp DatalogProgram.h Rule.cpp Rule.h Predicate.cpp Predicate.h Parameter.cpp Parameter.h Relation.cpp Relation.h Database.cpp Database.h Header.cpp Header.h Tuple.cpp Tuple.h Interpreter.cpp Interpreter.h)

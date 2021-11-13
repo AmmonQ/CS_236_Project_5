@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CS_236_Project_1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CS_236_Project_1">
+				<Option output="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/CS_236_Project_1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/."/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS_236_Project_1"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CS_236_Project_1/fast">
+				<Option output="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/CS_236_Project_1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/."/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS_236_Project_1/fast"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/AddAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/AddAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/Automaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/BlockCommentAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/BlockCommentAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/ColonAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/ColonAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/ColonDashAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/ColonDashAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/CommaAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/CommaAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/FactsAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/FactsAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/IdAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/IdAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/LeftParenAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/LeftParenAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/Lexer.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/Lexer.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/LineCommentAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/LineCommentAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/MultiplyAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/MultiplyAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/PeriodAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/PeriodAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/QMarkAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/QMarkAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/QueriesAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/QueriesAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/RightParenAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/RightParenAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/RulesAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/RulesAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/SchemesAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/SchemesAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/StringAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/StringAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/Token.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/Token.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/UndefinedBlockCommentAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/UndefinedBlockCommentAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/UndefinedStringAutomaton.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/UndefinedStringAutomaton.h">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/main.cpp">
+			<Option target="CS_236_Project_1"/>
+		</Unit>
+		<Unit filename="C:/Users/cppq/Documents/CS 236/CS-236-Project-1/CS_236_Project_1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
