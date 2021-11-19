@@ -25,7 +25,7 @@ void Graph::addAdjacencyLine(int key, set<int> listOfAdjacentVertices) {
 }
 
 void Graph::createDependencyGraph(vector<Rule> rulesFromDatalog) {
-    // for loop to push rules into ruleNumbers
+    // for loop to push rules into ruleNumbers OR PUSH RULES_FROM_DATALOG INTO ADJACENTY LIST VERTEX COLUMN
     for (int i = 0; i < rulesFromDatalog.size(); i++) {
         ruleNumbers.push_back(i);
     }
@@ -37,7 +37,9 @@ void Graph::createDependencyGraph(vector<Rule> rulesFromDatalog) {
             // third for loop: search rules again to see if bodyPredicate is a rule
             // and get the name
             for (int k = 0; k < rulesFromDatalog.size(); k++) {
-
+                if (rulesFromDatalog.at(i).getPredicate(j).getName() == rulesFromDatalog.at(i).getHeadPredicate().getName()) {
+                    // adjacent vertex to adjacency list
+                }
             }
         }
     }
