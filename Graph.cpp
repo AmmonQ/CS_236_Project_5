@@ -16,18 +16,42 @@ set<int> Graph::getAdjacencySet(int vertex) {
     return adjacencyList.at(vertex);
 }
 
-void Graph::addAdjacencyToSet(int vertex, int adjacentVertex) {
-    adjacencyList.at(vertex).insert(adjacentVertex);
+void Graph::addAdjacencyToSet(int vertex, int adjacentVertex, map<int, set<int>>& workingAdjacencyList) {
+    workingAdjacencyList.at(vertex).insert(adjacentVertex);
 }
 
-void Graph::addAdjacencyLine(int key, set<int> listOfAdjacentVertices) {
-    adjacencyList.insert(pair<int, set<int>>(key, listOfAdjacentVertices));
+void Graph::addAdjacencyLine(int key, set<int> listOfAdjacentVertices, map<int, set<int>>& workingAdjacencyList) {
+    workingAdjacencyList.insert(pair<int, set<int>>(key, listOfAdjacentVertices));
+}
+
+void Graph::addVertex(int newVertex, map<int, set<int>>& workingAdjacencyList) {
+    addAdjacencyLine(newVertex, set<int>(), workingAdjacencyList);
+}
+
+void Graph::PrintAdjacencyList(bool printReverse) {
+    cout << "\nVertex | Adjacency Vertices\n===========================\n";
+
+    map<int, set<int>> workingAdjacencyList;
+
+    if (printReverse) {
+        workingAdjacencyList = reverseAdjacencyList;
+    } else {
+        workingAdjacencyList = adjacencyList;
+    }
+
+    for (auto line : workingAdjacencyList) {
+        cout << line.first << "\t| ";
+        for (auto dependency : line.second) {
+            cout << dependency << " ";
+        }
+        cout << endl;
+    }
 }
 
 void Graph::createDependencyGraph(vector<Rule> rulesFromDatalog) {
-    // for loop to push rules into ruleNumbers OR PUSH RULES_FROM_DATALOG INTO ADJACENTY LIST VERTEX COLUMN
+    // PUSH RULES_FROM_DATALOG INTO ADJACENCY LIST VERTEX COLUMN
     for (int i = 0; i < rulesFromDatalog.size(); i++) {
-        ruleNumbers.push_back(i);
+        addVertex(i, adjacencyList);
     }
 
     // first for loop: go through rules (the ones from the datalog program)
@@ -37,14 +61,32 @@ void Graph::createDependencyGraph(vector<Rule> rulesFromDatalog) {
             // third for loop: search rules again to see if bodyPredicate is a rule
             // and get the name
             for (int k = 0; k < rulesFromDatalog.size(); k++) {
-                if (rulesFromDatalog.at(i).getPredicate(j).getName() == rulesFromDatalog.at(i).getHeadPredicate().getName()) {
+                if (rulesFromDatalog.at(i).getPredicate(j).getName() == rulesFromDatalog.at(k).getHeadPredicate().getName()) {
                     // adjacent vertex to adjacency list
+                    addAdjacencyToSet(i, k, adjacencyList);
                 }
             }
         }
     }
 }
 
-void Graph::createReverseDependencyGraph(vector<Rule> rulesFromDatalog) {
+// only call this after createDependencyGraph()
+void Graph::createReverseDependencyGraph() {
+    for (int i = 0; i < adjacencyList.size(); i++) {
+        addVertex(i, reverseAdjacencyList);
+    }
 
+    // first for loop: go through each vertex in the adjacency list
+    for (auto const& line : adjacencyList) {
+        // second for loop: go through the adjacency vertices
+        for (auto const& adjacency_vertex : line.second) {
+            // third for loop: find where terminal vertex matches initial vertex,
+            // then add initial vertex to reverse adjacency list
+            for (int i = 0; i < adjacencyList.size(); i++) {
+                if (adjacency_vertex == i) {
+                    addAdjacencyToSet(adjacency_vertex, line.first, reverseAdjacencyList);
+                }
+            }
+        }
+    }
 }

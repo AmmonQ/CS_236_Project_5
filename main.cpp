@@ -4,6 +4,7 @@
 #include "Parser.h"
 #include "Token.h"
 #include "Interpreter.h"
+#include "Graph.h"
 
 using namespace std;
 
@@ -41,8 +42,14 @@ int main(int argc, char** argv) {
 
     /*if (result == "Success!") {
         DatalogProgram datalogProgram = parser.getDatalogProgram();
-        cout << datalogProgram.toString() << endl;
+        cout << datalogProgram.PrintAdjacencyList() << endl;
     }*/
+
+    Graph testGraph = Graph();
+    testGraph.createDependencyGraph(datalogProgram1.getRules());
+    testGraph.PrintAdjacencyList();
+    testGraph.createReverseDependencyGraph();
+    testGraph.PrintAdjacencyList(true);
 
     delete lexer;
 

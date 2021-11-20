@@ -8,22 +8,27 @@
 #include <set>
 #include <map>
 #include "Rule.h"
+#include <iostream>
 
 using namespace std;
 
 class Graph {
 private:
     map<int, set<int>> adjacencyList;
-    vector<int> ruleNumbers;
+    map<int, set<int>> reverseAdjacencyList;
 public:
     Graph();
     set<int> getAdjacencySet(int vertex);
-    void addAdjacencyToSet(int key, int newValue);
-    void addAdjacencyLine(int key, set<int> newListLine);
+    void addAdjacencyToSet(int key, int newValue, map<int, set<int>>& workingAdjacencyList);
+    void addAdjacencyLine(int key, set<int> newListLine, map<int, set<int>>& workingAdjacencyList);
     map<int, set<int>> returnAdjacencyList();
+    // add vertex without adjacency set
+    void addVertex(int newVertex, map<int, set<int>>& workingAdjacencyList);
 
     void createDependencyGraph(vector<Rule> rulesFromDatalog);
-    void createReverseDependencyGraph(vector<Rule> rulesFromDatalog);
+    void createReverseDependencyGraph();
+
+    void PrintAdjacencyList(bool printReverse = false);
 };
 
 
