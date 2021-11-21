@@ -9,6 +9,7 @@
 #include <map>
 #include "Rule.h"
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -16,9 +17,10 @@ class Graph {
 private:
     map<int, set<int>> adjacencyList;
     map<int, set<int>> reverseAdjacencyList;
+    vector<int> visitedVertices;
 public:
     Graph();
-    set<int> getAdjacencySet(int vertex);
+    set<int> getAdjacencySet(int vertex, bool reverse = false);
     void addAdjacencyToSet(int key, int newValue, map<int, set<int>>& workingAdjacencyList);
     void addAdjacencyLine(int key, set<int> newListLine, map<int, set<int>>& workingAdjacencyList);
     map<int, set<int>> returnAdjacencyList();
@@ -29,6 +31,9 @@ public:
     void createReverseDependencyGraph();
 
     void PrintAdjacencyList(bool printReverse = false);
+
+    vector<int> getPostOrderOnTree();
+    void depthFirstSearch(int ruleNumber, vector<int>& postOrderVector);
 };
 
 

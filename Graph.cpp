@@ -12,8 +12,12 @@ map<int, set<int>> Graph::returnAdjacencyList() {
     return adjacencyList;
 }
 
-set<int> Graph::getAdjacencySet(int vertex) {
-    return adjacencyList.at(vertex);
+set<int> Graph::getAdjacencySet(int vertex, bool reverse) {
+    if (reverse) {
+        return reverseAdjacencyList.at(vertex);
+    } else {
+        return adjacencyList.at(vertex);
+    }
 }
 
 void Graph::addAdjacencyToSet(int vertex, int adjacentVertex, map<int, set<int>>& workingAdjacencyList) {
@@ -87,6 +91,40 @@ void Graph::createReverseDependencyGraph() {
                     addAdjacencyToSet(adjacency_vertex, line.first, reverseAdjacencyList);
                 }
             }
+        }
+    }
+}
+
+vector<int> Graph::getPostOrderOnTree() {
+    vector<int> postOrder;
+
+    for (auto const& line : reverseAdjacencyList) {
+        depthFirstSearch(line.first, postOrder);
+    }
+
+    return postOrder;
+}
+
+void Graph::depthFirstSearch(int ruleNumber, vector<int>& postOrderVector) {
+    if (find(visitedVertices.begin(), visitedVertices.end(), ruleNumber) != visitedVertices.end()) {
+        return;
+    } else {
+        // mark v
+        visitedVertices.push_back(ruleNumber);
+
+        // for each vertex w adjacent from v
+        if (getAdjacencySet(ruleNumber, true).size() == 0) {
+            postOrderVector.push_back(ruleNumber);
+        } else {
+            for (const auto& adjacentVertex : getAdjacencySet(ruleNumber, true)) {
+                // if w is not marked
+                if (find(visitedVertices.begin(), visitedVertices.end(), adjacentVertex) == visitedVertices.end()) {
+                    depthFirstSearch(adjacentVertex, postOrderVector);
+                } /*else {
+                    postOrderVector.push_back(adjacentVertex);
+                }*/
+            }
+            postOrderVector.push_back(ruleNumber);
         }
     }
 }

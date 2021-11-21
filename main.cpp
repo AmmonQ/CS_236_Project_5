@@ -45,11 +45,22 @@ int main(int argc, char** argv) {
         cout << datalogProgram.PrintAdjacencyList() << endl;
     }*/
 
+    // testing project 5 as we go
     Graph testGraph = Graph();
     testGraph.createDependencyGraph(datalogProgram1.getRules());
+    cout << "\nAdjacency List:\n";
     testGraph.PrintAdjacencyList();
     testGraph.createReverseDependencyGraph();
+    cout << "\nReverse Adjacency List:\n";
     testGraph.PrintAdjacencyList(true);
+
+    vector<int> testPostOrderVector = testGraph.getPostOrderOnTree();
+
+    cout << "\ntest post order vector: \n";
+
+    for (auto const& v : testPostOrderVector) {
+        cout << v << " ";
+    }
 
     delete lexer;
 
