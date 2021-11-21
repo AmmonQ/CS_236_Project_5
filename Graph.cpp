@@ -20,15 +20,15 @@ set<int> Graph::getAdjacencySet(int vertex, bool reverse) {
     }
 }
 
-void Graph::addAdjacencyToSet(int vertex, int adjacentVertex, map<int, set<int>>& workingAdjacencyList) {
+void Graph::addAdjacencyToSet(int vertex, int adjacentVertex, map<int, set<int>> &workingAdjacencyList) {
     workingAdjacencyList.at(vertex).insert(adjacentVertex);
 }
 
-void Graph::addAdjacencyLine(int key, set<int> listOfAdjacentVertices, map<int, set<int>>& workingAdjacencyList) {
+void Graph::addAdjacencyLine(int key, set<int> listOfAdjacentVertices, map<int, set<int>> &workingAdjacencyList) {
     workingAdjacencyList.insert(pair<int, set<int>>(key, listOfAdjacentVertices));
 }
 
-void Graph::addVertex(int newVertex, map<int, set<int>>& workingAdjacencyList) {
+void Graph::addVertex(int newVertex, map<int, set<int>> &workingAdjacencyList) {
     addAdjacencyLine(newVertex, set<int>(), workingAdjacencyList);
 }
 
@@ -43,9 +43,9 @@ void Graph::PrintAdjacencyList(bool printReverse) {
         workingAdjacencyList = adjacencyList;
     }
 
-    for (auto line : workingAdjacencyList) {
+    for (auto line: workingAdjacencyList) {
         cout << line.first << "\t| ";
-        for (auto dependency : line.second) {
+        for (auto dependency: line.second) {
             cout << dependency << " ";
         }
         cout << endl;
@@ -65,7 +65,8 @@ void Graph::createDependencyGraph(vector<Rule> rulesFromDatalog) {
             // third for loop: search rules again to see if bodyPredicate is a rule
             // and get the name
             for (int k = 0; k < rulesFromDatalog.size(); k++) {
-                if (rulesFromDatalog.at(i).getPredicate(j).getName() == rulesFromDatalog.at(k).getHeadPredicate().getName()) {
+                if (rulesFromDatalog.at(i).getPredicate(j).getName() ==
+                    rulesFromDatalog.at(k).getHeadPredicate().getName()) {
                     // adjacent vertex to adjacency list
                     addAdjacencyToSet(i, k, adjacencyList);
                 }
@@ -81,9 +82,9 @@ void Graph::createReverseDependencyGraph() {
     }
 
     // first for loop: go through each vertex in the adjacency list
-    for (auto const& line : adjacencyList) {
+    for (auto const &line: adjacencyList) {
         // second for loop: go through the adjacency vertices
-        for (auto const& adjacency_vertex : line.second) {
+        for (auto const &adjacency_vertex: line.second) {
             // third for loop: find where terminal vertex matches initial vertex,
             // then add initial vertex to reverse adjacency list
             for (int i = 0; i < adjacencyList.size(); i++) {
@@ -98,14 +99,14 @@ void Graph::createReverseDependencyGraph() {
 vector<int> Graph::getPostOrderOnTree() {
     vector<int> postOrder;
 
-    for (auto const& line : reverseAdjacencyList) {
+    for (auto const &line: reverseAdjacencyList) {
         depthFirstSearch(line.first, postOrder);
     }
 
     return postOrder;
 }
 
-void Graph::depthFirstSearch(int ruleNumber, vector<int>& postOrderVector) {
+void Graph::depthFirstSearch(int ruleNumber, vector<int> &postOrderVector) {
     if (find(visitedVertices.begin(), visitedVertices.end(), ruleNumber) != visitedVertices.end()) {
         return;
     } else {
@@ -116,13 +117,11 @@ void Graph::depthFirstSearch(int ruleNumber, vector<int>& postOrderVector) {
         if (getAdjacencySet(ruleNumber, true).size() == 0) {
             postOrderVector.push_back(ruleNumber);
         } else {
-            for (const auto& adjacentVertex : getAdjacencySet(ruleNumber, true)) {
+            for (const auto &adjacentVertex: getAdjacencySet(ruleNumber, true)) {
                 // if w is not marked
                 if (find(visitedVertices.begin(), visitedVertices.end(), adjacentVertex) == visitedVertices.end()) {
                     depthFirstSearch(adjacentVertex, postOrderVector);
-                } /*else {
-                    postOrderVector.push_back(adjacentVertex);
-                }*/
+                }
             }
             postOrderVector.push_back(ruleNumber);
         }
