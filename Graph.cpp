@@ -47,13 +47,22 @@ void Graph::PrintAdjacencyList(bool printReverse) {
         workingAdjacencyList = adjacencyList;
     }
 
+    string output;
+
     for (auto line: workingAdjacencyList) {
-        cout << "R" << line.first << ":";
+        output += "R" + to_string(line.first) + ":";
         for (auto dependency: line.second) {
-            cout << "R" << dependency << " ";
+            output += "R" + to_string(dependency) + ",";
         }
-        cout << endl;
+
+        if (output.back() == ',') {
+            output.pop_back();
+        }
+
+        output += "\n";
     }
+
+    cout << output;
 }
 
 void Graph::createDependencyGraph(vector<Rule> rulesFromDatalog) {

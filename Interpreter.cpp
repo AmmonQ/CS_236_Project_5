@@ -175,17 +175,28 @@ Relation Interpreter::evaluatePredicate(Predicate p) {
 }
 
 void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
-    // loop through SCCs
-    // for each SCC
-    // if more than on element
-    // if only one check if it's a self loop
-
     for (auto const& scc : allSCCs) {
         cout << "SCC: ";
         for (auto const& rule : scc) {
-            cout << "R" << rule.first << endl;
             vector<Relation> myRelations;
-            if (rule.second.size() > 0) {
+            if (!rule.second.empty()) {
+                // make set of rules (least to greatest)
+                set<int> sccRules;
+                sccRules.insert(rule.first);
+
+                for (auto const& i : rule.second) {
+                    sccRules.insert(i);
+                }
+
+                string output;
+
+                for (auto const& i : sccRules) {
+                    output += "R" + to_string(i) + ",";
+                }
+
+                output.pop_back();
+                cout << output << endl;
+
                 int before = 0;
                 int after = 0;
 
@@ -198,7 +209,7 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
                     Predicate firstScheme;
 
                     for (int i = 0; i < datalogProgram.getSchemesSize(); i++) {
-                        if (datalogProgram.getScheme(i).getName() == datalogProgram.getRule(i).getHeadPredicate().getName()) {
+                        if (datalogProgram.getScheme(i).getName() == getRuleFromNumber(rule.first).getHeadPredicate().getName()) {
                             firstScheme = datalogProgram.getScheme(i);
                         }
                     }
@@ -207,6 +218,7 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
 
                     // this is for rule.second
                     for (auto const& r : rule.second) {
+
                         Predicate myScheme;
 
                         for (int i = 0; i < datalogProgram.getSchemesSize(); i++) {
@@ -215,7 +227,6 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
                             }
                         }
 
-                        cout << " R" << r << endl;
                         myRelations.push_back(evaluateRule(getRuleFromNumber(r), myScheme));
                     }
 
@@ -223,8 +234,11 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
                     numPasses++;
                 } while (after - before != 0);
 
-                cout << numPasses << " passes: R" << rule.first << endl;
+                cout << numPasses << " passes: ";
+
+                cout << output << endl;
             } else {
+                cout << "R" << rule.first << endl;
                 if (getRuleFromNumber(rule.first).getHeadPredicate().getName() == getRuleFromNumber(rule.first).getPredicate(0).getName()) {
                     int before = 0;
                     int after = 0;
