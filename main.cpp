@@ -57,7 +57,29 @@ int main(int argc, char** argv) {
     graph.addAdjacencyLineTesting(7, set<int>{5,6,7,8});
     graph.addAdjacencyLineTesting(8, set<int>{5,7,8});
 
+    // step 1
     graph.PrintAdjacencyList();
+
+    // step 2
+    graph.createReverseDependencyGraph();
+    graph.PrintAdjacencyList(true);
+
+    // step 3
+    vector<int> postOrder = graph.getPostOrderOnTree(graph.getReverseDependencyGraph());
+
+    cout << "\npost order: ";
+    for (auto i : postOrder) {
+        cout << i << " ";
+    }
+
+    // step 4
+    vector<map<int, set<int>>> SCCs = graph.getStronglyConnectedComponents();
+
+    cout << "\n\nSCCs:\n";
+
+    for (auto i : SCCs) {
+        graph.printSCCs(i);
+    }
 
     delete lexer;
 

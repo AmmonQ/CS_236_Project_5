@@ -32,6 +32,8 @@ public:
     void createDependencyGraph(vector<Rule> rulesFromDatalog);
     void createReverseDependencyGraph();
 
+    map<int, set<int>> getReverseDependencyGraph();
+
     void PrintAdjacencyList(bool printReverse = false);
 
     vector<int> getPostOrderOnTree(map<int, set<int>> graph);
@@ -42,6 +44,9 @@ public:
     void depthFirstSearchTree(int ruleNumber, map<int, set<int>> &tree, map<int, set<int>> graph);
 
     vector<map<int, set<int>>> getStronglyConnectedComponents();
+
+    // for testing
+    void printSCCs(map<int, set<int>> tree);
 };
 
 

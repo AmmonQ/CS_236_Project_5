@@ -182,6 +182,11 @@ void Graph::depthFirstSearchTree(int ruleNumber, map<int, set<int>> &tree, map<i
     for (auto const& vertex : graph.at(ruleNumber)) {
         if (find(visitedVertices.begin(), visitedVertices.end(), vertex) == visitedVertices.end()) {
             visitedVertices.push_back(vertex);
+
+            if (tree.find(ruleNumber) == tree.end()) {
+                tree.insert(pair<int, set<int>>(ruleNumber, set<int>()));
+            }
+
             tree.at(ruleNumber).insert(vertex);
             depthFirstSearchTree(vertex, tree, graph);
         }
@@ -196,6 +201,8 @@ vector<map<int, set<int>>> Graph::getStronglyConnectedComponents() {
 
     reversedGraphPostOrder = getPostOrderOnTree(reverseAdjacencyList);
 
+    visitedVertices.clear();
+
     for (int i = reversedGraphPostOrder.size() - 1; i >= 0; i--) {
         if (find(visitedVertices.begin(), visitedVertices.end(), reversedGraphPostOrder.at(i)) == visitedVertices.end()) {
             visitedVertices.push_back(reversedGraphPostOrder.at(i));
@@ -207,4 +214,20 @@ vector<map<int, set<int>>> Graph::getStronglyConnectedComponents() {
     }
 
     return sccForest;
+}
+
+map<int, set<int>> Graph::getReverseDependencyGraph() {
+    return reverseAdjacencyList;
+}
+
+void Graph::printSCCs(map<int, set<int>> tree) {
+    cout << "===========================\n";
+
+    for (auto line: tree) {
+        cout << line.first << "\t| ";
+        for (auto dependency: line.second) {
+            cout << dependency << " ";
+        }
+        cout << endl;
+    }
 }
