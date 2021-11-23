@@ -239,7 +239,18 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
                 cout << output << endl;
             } else {
                 cout << "R" << rule.first << endl;
-                if (getRuleFromNumber(rule.first).getHeadPredicate().getName() == getRuleFromNumber(rule.first).getPredicate(0).getName()) {
+
+                // loop through to see if rule self loops
+
+                bool selfLoops = false;
+
+                for (int i = 0; i < getRuleFromNumber(rule.first).getPredicateListSize(); i++) {
+                    if (getRuleFromNumber(rule.first).getHeadPredicate().getName() == getRuleFromNumber(rule.first).getPredicate(i).getName()) {
+                        selfLoops = true;
+                    }
+                }
+
+                if (selfLoops) {
                     int before = 0;
                     int after = 0;
 
