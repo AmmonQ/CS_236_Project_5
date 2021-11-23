@@ -8,43 +8,43 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CS_236_Project_5">
-				<Option output="/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/CS_236_Project_5" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/CS_236_Project_5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/ammon/CLionProjects/CS_236_Project_5/."/>
+					<Add directory="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/."/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -54,20 +54,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS_236_Project_5"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS_236_Project_5"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CS_236_Project_5/fast">
-				<Option output="/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/CS_236_Project_5" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/CS_236_Project_5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/ammon/CLionProjects/CS_236_Project_5/."/>
+					<Add directory="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/."/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -77,212 +77,212 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS_236_Project_5/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS_236_Project_5/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/AddAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/AddAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/AddAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/AddAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Automaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Automaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/BlockCommentAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/BlockCommentAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/BlockCommentAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/BlockCommentAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/ColonAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/ColonAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/ColonAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/ColonAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/ColonDashAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/ColonDashAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/ColonDashAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/ColonDashAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/CommaAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/CommaAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/CommaAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/CommaAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Database.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Database.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Database.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Database.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/DatalogProgram.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/DatalogProgram.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/DatalogProgram.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/DatalogProgram.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/FactsAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/FactsAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/FactsAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/FactsAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Graph.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Graph.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Graph.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Graph.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Header.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Header.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Header.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Header.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/IdAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/IdAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/IdAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/IdAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Interpreter.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Interpreter.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Interpreter.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Interpreter.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/LeftParenAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/LeftParenAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/LeftParenAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/LeftParenAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Lexer.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Lexer.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Lexer.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Lexer.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/LineCommentAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/LineCommentAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/LineCommentAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/LineCommentAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/MultiplyAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/MultiplyAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/MultiplyAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/MultiplyAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Parameter.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parameter.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Parameter.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parameter.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Parser.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parser.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Parser.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parser.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/PeriodAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/PeriodAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/PeriodAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/PeriodAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Predicate.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Predicate.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Predicate.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Predicate.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/QMarkAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/QMarkAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/QMarkAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/QMarkAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/QueriesAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/QueriesAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/QueriesAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/QueriesAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Relation.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Relation.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Relation.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Relation.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/RightParenAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/RightParenAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/RightParenAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/RightParenAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Rule.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Rule.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Rule.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Rule.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/RulesAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/RulesAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/RulesAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/RulesAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/SchemesAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/SchemesAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/SchemesAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/SchemesAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/StringAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/StringAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/StringAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/StringAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Token.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Token.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Token.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Token.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Tuple.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Tuple.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/Tuple.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Tuple.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/UndefinedBlockCommentAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/UndefinedBlockCommentAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/UndefinedBlockCommentAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/UndefinedBlockCommentAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/UndefinedStringAutomaton.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/UndefinedStringAutomaton.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/UndefinedStringAutomaton.h">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/UndefinedStringAutomaton.h">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/main.cpp">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/main.cpp">
 			<Option target="CS_236_Project_5"/>
 		</Unit>
-		<Unit filename="/home/ammon/CLionProjects/CS_236_Project_5/CMakeLists.txt">
+		<Unit filename="/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -46,21 +46,18 @@ int main(int argc, char** argv) {
     }*/
 
     // testing project 5 as we go
-    Graph testGraph = Graph();
-    testGraph.createDependencyGraph(datalogProgram1.getRules());
-    cout << "\nAdjacency List:\n";
-    testGraph.PrintAdjacencyList();
-    testGraph.createReverseDependencyGraph();
-    cout << "\nReverse Adjacency List:\n";
-    testGraph.PrintAdjacencyList(true);
+    Graph graph = Graph();
+    graph.addAdjacencyLineTesting(0, set<int>());
+    graph.addAdjacencyLineTesting(1, set<int>{2});
+    graph.addAdjacencyLineTesting(2, set<int>{0,1,3});
+    graph.addAdjacencyLineTesting(3, set<int>{0,1,3});
+    graph.addAdjacencyLineTesting(4, set<int>{0,1,2,3});
+    graph.addAdjacencyLineTesting(5, set<int>());
+    graph.addAdjacencyLineTesting(6, set<int>{4,5,7,8});
+    graph.addAdjacencyLineTesting(7, set<int>{5,6,7,8});
+    graph.addAdjacencyLineTesting(8, set<int>{5,7,8});
 
-    vector<int> testPostOrderVector = testGraph.getPostOrderOnTree();
-
-    cout << "\ntest post order vector: \n";
-
-    for (auto const& v : testPostOrderVector) {
-        cout << v << " ";
-    }
+    graph.PrintAdjacencyList();
 
     delete lexer;
 

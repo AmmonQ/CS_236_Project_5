@@ -24,6 +24,10 @@ void Graph::addAdjacencyToSet(int vertex, int adjacentVertex, map<int, set<int>>
     workingAdjacencyList.at(vertex).insert(adjacentVertex);
 }
 
+void Graph::addAdjacencyLineTesting(int key, set<int> newListLine) {
+    adjacencyList.insert(pair<int, set<int>>(key, newListLine));
+}
+
 void Graph::addAdjacencyLine(int key, set<int> listOfAdjacentVertices, map<int, set<int>> &workingAdjacencyList) {
     workingAdjacencyList.insert(pair<int, set<int>>(key, listOfAdjacentVertices));
 }
@@ -96,17 +100,17 @@ void Graph::createReverseDependencyGraph() {
     }
 }
 
-vector<int> Graph::getPostOrderOnTree() {
+vector<int> Graph::getPostOrderOnTree(map<int, set<int>> graph) {
     vector<int> postOrder;
 
     for (auto const &line: reverseAdjacencyList) {
-        depthFirstSearch(line.first, postOrder);
+        depthFirstSearch(line.first, postOrder, graph);
     }
 
     return postOrder;
 }
 
-void Graph::depthFirstSearch(int ruleNumber, vector<int> &postOrderVector) {
+void Graph::depthFirstSearch(int ruleNumber, vector<int> &postOrderVector, map<int, set<int>> graph) {
     if (find(visitedVertices.begin(), visitedVertices.end(), ruleNumber) != visitedVertices.end()) {
         return;
     } else {
@@ -114,16 +118,93 @@ void Graph::depthFirstSearch(int ruleNumber, vector<int> &postOrderVector) {
         visitedVertices.push_back(ruleNumber);
 
         // for each vertex w adjacent from v
-        if (getAdjacencySet(ruleNumber, true).size() == 0) {
+        if (graph.at(ruleNumber).size() == 0) {
             postOrderVector.push_back(ruleNumber);
         } else {
-            for (const auto &adjacentVertex: getAdjacencySet(ruleNumber, true)) {
+            for (const auto &adjacentVertex: graph.at(ruleNumber)) {
                 // if w is not marked
                 if (find(visitedVertices.begin(), visitedVertices.end(), adjacentVertex) == visitedVertices.end()) {
-                    depthFirstSearch(adjacentVertex, postOrderVector);
+                    depthFirstSearch(adjacentVertex, postOrderVector, graph);
                 }
             }
             postOrderVector.push_back(ruleNumber);
         }
     }
+}
+
+vector<int> Graph::getPostOrderOnForest(vector<map<int, set<int>>> forest) {
+    vector<int> postOrder = {};
+
+    for (int i = 0; i < forest.size(); i++) {
+        vector<int> tempOrder = {};
+        tempOrder = getPostOrderOnTree(forest.at(i));
+        postOrder.insert(postOrder.end(), tempOrder.begin(), tempOrder.end());
+    }
+
+    return postOrder;
+}
+
+vector<map<int, set<int>>> Graph::depthFirstSearchForest(map<int, set<int>> tree) {
+    visitedVertices.clear();
+
+    vector<map<int, set<int>>> forest;
+
+    for (auto const& vertex : tree) {
+        if (find(visitedVertices.begin(), visitedVertices.end(), vertex.first) == visitedVertices.end()) {
+            visitedVertices.push_back(vertex.first);
+
+            map<int, set<int>> outputTree = depthFirstSearchForTree(vertex.first, tree);
+
+            forest.push_back(outputTree);
+        }
+    }
+
+    return forest;
+}
+
+map<int, set<int>> Graph::depthFirstSearchForTree(int ruleNumber, map<int, set<int>> graph) {
+    map<int, set<int>> tree;
+
+    depthFirstSearchTree(ruleNumber, tree, graph);
+
+    if (tree.size() == 0) {
+        tree.insert(pair<int, set<int>>(ruleNumber, set<int>()));
+    }
+
+    return tree;
+}
+
+void Graph::depthFirstSearchTree(int ruleNumber, map<int, set<int>> &tree, map<int, set<int>> graph) {
+    if (graph.at(ruleNumber).size() == 0) {
+        return;
+    }
+
+    for (auto const& vertex : graph.at(ruleNumber)) {
+        if (find(visitedVertices.begin(), visitedVertices.end(), vertex) == visitedVertices.end()) {
+            visitedVertices.push_back(vertex);
+            tree.at(ruleNumber).insert(vertex);
+            depthFirstSearchTree(vertex, tree, graph);
+        }
+    }
+}
+
+vector<map<int, set<int>>> Graph::getStronglyConnectedComponents() {
+    vector<int> reversedGraphPostOrder = {};
+    vector<map<int, set<int>>> sccForest = {};
+
+    visitedVertices.clear();
+
+    reversedGraphPostOrder = getPostOrderOnTree(reverseAdjacencyList);
+
+    for (int i = reversedGraphPostOrder.size() - 1; i >= 0; i--) {
+        if (find(visitedVertices.begin(), visitedVertices.end(), reversedGraphPostOrder.at(i)) == visitedVertices.end()) {
+            visitedVertices.push_back(reversedGraphPostOrder.at(i));
+
+            map<int, set<int>> outputTree = depthFirstSearchForTree(reversedGraphPostOrder.at(i), adjacencyList);
+
+            sccForest.push_back(outputTree);
+        }
+    }
+
+    return sccForest;
 }

@@ -6,37 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/ammon/CLionProjects/CS_236_Project_5/Graph.cpp
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Graph.cpp
 Graph.h
-/home/ammon/CLionProjects/CS_236_Project_5/Graph.h
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Graph.h
 
-/home/ammon/CLionProjects/CS_236_Project_5/Graph.h
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Graph.h
 set
 -
 map
 -
 Rule.h
-/home/ammon/CLionProjects/CS_236_Project_5/Rule.h
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Rule.h
 iostream
 -
 algorithm
 -
 
-/home/ammon/CLionProjects/CS_236_Project_5/Parameter.h
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parameter.h
 string
 -
 
-/home/ammon/CLionProjects/CS_236_Project_5/Predicate.h
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Predicate.h
 string
 -
 vector
 -
 Parameter.h
-/home/ammon/CLionProjects/CS_236_Project_5/Parameter.h
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parameter.h
 
-/home/ammon/CLionProjects/CS_236_Project_5/Rule.h
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Rule.h
 Predicate.h
-/home/ammon/CLionProjects/CS_236_Project_5/Predicate.h
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Predicate.h
 vector
 -
 string

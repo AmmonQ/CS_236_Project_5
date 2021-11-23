@@ -1,3 +1,3 @@
-/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ammon/CLionProjects/CS_236_Project_5/cmake-build-debug/CMakeFiles/CS_236_Project_5.dir
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/cmake-build-debug/CMakeFiles/CS_236_Project_5.dir

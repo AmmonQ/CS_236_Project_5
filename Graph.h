@@ -23,7 +23,9 @@ public:
     set<int> getAdjacencySet(int vertex, bool reverse = false);
     void addAdjacencyToSet(int key, int newValue, map<int, set<int>>& workingAdjacencyList);
     void addAdjacencyLine(int key, set<int> newListLine, map<int, set<int>>& workingAdjacencyList);
+    void addAdjacencyLineTesting(int key, set<int> newListLine);
     map<int, set<int>> returnAdjacencyList();
+    map<int, set<int>>& returnAdjacencyListByReference();
     // add vertex without adjacency set
     void addVertex(int newVertex, map<int, set<int>>& workingAdjacencyList);
 
@@ -32,8 +34,14 @@ public:
 
     void PrintAdjacencyList(bool printReverse = false);
 
-    vector<int> getPostOrderOnTree();
-    void depthFirstSearch(int ruleNumber, vector<int>& postOrderVector);
+    vector<int> getPostOrderOnTree(map<int, set<int>> graph);
+    void depthFirstSearch(int ruleNumber, vector<int>& postOrderVector, map<int, set<int>> graph);
+    vector<int> getPostOrderOnForest(vector<map<int, set<int>>> forest);
+    vector<map<int, set<int>>> depthFirstSearchForest(map<int, set<int>> tree);
+    map<int, set<int>> depthFirstSearchForTree(int ruleNumber, map<int, set<int>> graph);
+    void depthFirstSearchTree(int ruleNumber, map<int, set<int>> &tree, map<int, set<int>> graph);
+
+    vector<map<int, set<int>>> getStronglyConnectedComponents();
 };
 
 
