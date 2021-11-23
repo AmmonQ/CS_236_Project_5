@@ -174,6 +174,101 @@ Relation Interpreter::evaluatePredicate(Predicate p) {
     return workingRelation;
 }
 
+void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
+    // loop through SCCs
+    // for each SCC
+    // if more than on element
+    // if only one check if it's a self loop
+
+    for (auto const& scc : allSCCs) {
+        cout << "SCC: ";
+        for (auto const& rule : scc) {
+            cout << "R" << rule.first << endl;
+            vector<Relation> myRelations;
+            if (rule.second.size() > 0) {
+                int before = 0;
+                int after = 0;
+
+                int numPasses = 0;
+
+                do {
+                    before = database.getTupleAmount();
+
+                    // this is for rule.first
+                    Predicate firstScheme;
+
+                    for (int i = 0; i < datalogProgram.getSchemesSize(); i++) {
+                        if (datalogProgram.getScheme(i).getName() == datalogProgram.getRule(i).getHeadPredicate().getName()) {
+                            firstScheme = datalogProgram.getScheme(i);
+                        }
+                    }
+
+                    myRelations.push_back(evaluateRule(getRuleFromNumber(rule.first), firstScheme));
+
+                    // this is for rule.second
+                    for (auto const& r : rule.second) {
+                        Predicate myScheme;
+
+                        for (int i = 0; i < datalogProgram.getSchemesSize(); i++) {
+                            if (datalogProgram.getScheme(i).getName() == getRuleFromNumber(r).getHeadPredicate().getName()) {
+                                myScheme = datalogProgram.getScheme(i);
+                            }
+                        }
+
+                        cout << " R" << r << endl;
+                        myRelations.push_back(evaluateRule(getRuleFromNumber(r), myScheme));
+                    }
+
+                    after = database.getTupleAmount();
+                    numPasses++;
+                } while (after - before != 0);
+
+                cout << numPasses << " passes: R" << rule.first << endl;
+            } else {
+                if (getRuleFromNumber(rule.first).getHeadPredicate().getName() == getRuleFromNumber(rule.first).getPredicate(0).getName()) {
+                    int before = 0;
+                    int after = 0;
+
+                    int numPasses = 0;
+
+                    do {
+                        before = database.getTupleAmount();
+
+                        Predicate myScheme;
+
+                        for (int i = 0; i < datalogProgram.getSchemesSize(); i++) {
+                            if (datalogProgram.getScheme(i).getName() == getRuleFromNumber(rule.first).getHeadPredicate().getName()) {
+                                myScheme = datalogProgram.getScheme(i);
+                            }
+                        }
+
+                        myRelations.push_back(evaluateRule(getRuleFromNumber(rule.first), myScheme));
+                        after = database.getTupleAmount();
+                        numPasses++;
+                    } while (after - before != 0);
+
+                    cout << numPasses << " passes: R" << rule.first << endl;
+                } else {
+                    Predicate myScheme;
+
+                    for (int i = 0; i < datalogProgram.getSchemesSize(); i++) {
+                        if (datalogProgram.getScheme(i).getName() == getRuleFromNumber(rule.first).getHeadPredicate().getName()) {
+                            myScheme = datalogProgram.getScheme(i);
+                        }
+                    }
+
+                    myRelations.push_back(evaluateRule(getRuleFromNumber(rule.first), myScheme));
+                    cout << "1 passes: R" << rule.first << endl;
+                }
+            }
+        }
+    }
+}
+
+Rule Interpreter::getRuleFromNumber(int number) {
+    return datalogProgram.getRule(number);
+}
+
 void Interpreter::evaluateAllQueries() {
     vector<Predicate> queries = datalogProgram.getQueries();
 

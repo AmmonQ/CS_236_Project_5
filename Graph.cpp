@@ -37,7 +37,7 @@ void Graph::addVertex(int newVertex, map<int, set<int>> &workingAdjacencyList) {
 }
 
 void Graph::PrintAdjacencyList(bool printReverse) {
-    cout << "\nVertex | Adjacency Vertices\n===========================\n";
+    cout << "Dependency Graph\n";
 
     map<int, set<int>> workingAdjacencyList;
 
@@ -48,9 +48,9 @@ void Graph::PrintAdjacencyList(bool printReverse) {
     }
 
     for (auto line: workingAdjacencyList) {
-        cout << line.first << "\t| ";
+        cout << "R" << line.first << ":";
         for (auto dependency: line.second) {
-            cout << dependency << " ";
+            cout << "R" << dependency << " ";
         }
         cout << endl;
     }
@@ -58,17 +58,17 @@ void Graph::PrintAdjacencyList(bool printReverse) {
 
 void Graph::createDependencyGraph(vector<Rule> rulesFromDatalog) {
     // PUSH RULES_FROM_DATALOG INTO ADJACENCY LIST VERTEX COLUMN
-    for (int i = 0; i < rulesFromDatalog.size(); i++) {
+    for (unsigned int i = 0; i < rulesFromDatalog.size(); i++) {
         addVertex(i, adjacencyList);
     }
 
     // first for loop: go through rules (the ones from the datalog program)
-    for (int i = 0; i < rulesFromDatalog.size(); i++) {
+    for (unsigned int i = 0; i < rulesFromDatalog.size(); i++) {
         // second for loop: go through the body predicates
         for (int j = 0; j < rulesFromDatalog.at(i).getPredicateListSize(); j++) {
             // third for loop: search rules again to see if bodyPredicate is a rule
             // and get the name
-            for (int k = 0; k < rulesFromDatalog.size(); k++) {
+            for (unsigned int k = 0; k < rulesFromDatalog.size(); k++) {
                 if (rulesFromDatalog.at(i).getPredicate(j).getName() ==
                     rulesFromDatalog.at(k).getHeadPredicate().getName()) {
                     // adjacent vertex to adjacency list
@@ -81,23 +81,27 @@ void Graph::createDependencyGraph(vector<Rule> rulesFromDatalog) {
 
 // only call this after createDependencyGraph()
 void Graph::createReverseDependencyGraph() {
-    for (int i = 0; i < adjacencyList.size(); i++) {
+    for (unsigned int i = 0; i < adjacencyList.size(); i++) {
         addVertex(i, reverseAdjacencyList);
     }
 
     // first for loop: go through each vertex in the adjacency list
     for (auto const &line: adjacencyList) {
         // second for loop: go through the adjacency vertices
-        for (auto const &adjacency_vertex: line.second) {
+        for (auto adjacency_vertex: line.second) {
             // third for loop: find where terminal vertex matches initial vertex,
             // then add initial vertex to reverse adjacency list
-            for (int i = 0; i < adjacencyList.size(); i++) {
+            for (int i = 0; i < getAdjacencyListSize(); i++) {
                 if (adjacency_vertex == i) {
                     addAdjacencyToSet(adjacency_vertex, line.first, reverseAdjacencyList);
                 }
             }
         }
     }
+}
+
+int Graph::getAdjacencyListSize() {
+    return adjacencyList.size();
 }
 
 vector<int> Graph::getPostOrderOnTree(map<int, set<int>> graph) {
@@ -135,7 +139,7 @@ void Graph::depthFirstSearch(int ruleNumber, vector<int> &postOrderVector, map<i
 vector<int> Graph::getPostOrderOnForest(vector<map<int, set<int>>> forest) {
     vector<int> postOrder = {};
 
-    for (int i = 0; i < forest.size(); i++) {
+    for (unsigned int i = 0; i < forest.size(); i++) {
         vector<int> tempOrder = {};
         tempOrder = getPostOrderOnTree(forest.at(i));
         postOrder.insert(postOrder.end(), tempOrder.begin(), tempOrder.end());

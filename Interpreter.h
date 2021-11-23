@@ -26,6 +26,10 @@ public:
     Relation evaluateRule(Rule r, Predicate scheme);
     void evaluateAllQueries();
     void evaluateAllRules();
+
+    void evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs);
+
+    Rule getRuleFromNumber(int number);
 };
 
 

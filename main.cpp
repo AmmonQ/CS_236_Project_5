@@ -37,7 +37,18 @@ int main(int argc, char** argv) {
     DatalogProgram datalogProgram1 = parser.getDatalogProgram();
 
     Interpreter interpreter = Interpreter(datalogProgram1);
-    interpreter.evaluateAllRules();
+
+    Graph graph = Graph();
+    graph.createDependencyGraph(datalogProgram1.getRules());
+    graph.createReverseDependencyGraph();
+    vector<int> postOrder = graph.getPostOrderOnTree(graph.getReverseDependencyGraph());
+    vector<map<int, set<int>>> SCCs = graph.getStronglyConnectedComponents();
+    graph.PrintAdjacencyList();
+    cout << endl << "Rule Evaluation" << endl;
+    interpreter.evaluateAllRulesSCCs(SCCs);
+
+    //interpreter.evaluateAllRules();
+    cout << endl;
     interpreter.evaluateAllQueries();
 
     /*if (result == "Success!") {
@@ -46,7 +57,7 @@ int main(int argc, char** argv) {
     }*/
 
     // testing project 5 as we go
-    Graph graph = Graph();
+    /*Graph graph = Graph();
     graph.addAdjacencyLineTesting(0, set<int>());
     graph.addAdjacencyLineTesting(1, set<int>{2});
     graph.addAdjacencyLineTesting(2, set<int>{0,1,3});
@@ -79,7 +90,7 @@ int main(int argc, char** argv) {
 
     for (auto i : SCCs) {
         graph.printSCCs(i);
-    }
+    }*/
 
     delete lexer;
 

@@ -47,6 +47,7 @@ public:
 
     // for testing
     void printSCCs(map<int, set<int>> tree);
+    int getAdjacencyListSize();
 };
 
 
