@@ -45,11 +45,18 @@ int main(int argc, char** argv) {
     vector<map<int, set<int>>> SCCs = graph.getStronglyConnectedComponents();
     graph.PrintAdjacencyList();
     cout << endl << "Rule Evaluation" << endl;
+
+    cout << "\n\nSCCs:\n";
+
+    /*for (auto i : SCCs) {
+        graph.printSCCs(i);
+    }*/
+
     interpreter.evaluateAllRulesSCCs(SCCs);
 
     //interpreter.evaluateAllRules();
     cout << endl;
-    interpreter.evaluateAllQueries();
+    //interpreter.evaluateAllQueries();
 
     /*if (result == "Success!") {
         DatalogProgram datalogProgram = parser.getDatalogProgram();

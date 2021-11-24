@@ -23,6 +23,10 @@ int Database::getTupleAmount() {
     return total;
 }
 
+int Database::getTupleAmountInRelation(string key) {
+    return relations.at(key).getRows().size();
+}
+
 void Database::setRelations(map<string, Relation> newRelation) {
     relations = newRelation;
 }

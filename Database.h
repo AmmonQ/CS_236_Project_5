@@ -21,6 +21,7 @@ public:
     Relation& getRelationByReference(string key);
     Relation getRelation(string key);
     int getTupleAmount();
+    int getTupleAmountInRelation(string key);
 };
 
 
