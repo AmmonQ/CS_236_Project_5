@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Automaton.h
-Token.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Token.h
-
 /mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Database.h
 map
 -
@@ -26,18 +22,6 @@ Rule.h
 Predicate.h
 /mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Predicate.h
 set
--
-
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Graph.h
-set
--
-map
--
-Rule.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Rule.h
-iostream
--
-algorithm
 -
 
 /mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Header.h
@@ -62,31 +46,9 @@ Tuple.h
 algorithm
 -
 
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Lexer.h
-vector
--
-Automaton.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Automaton.h
-Token.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Token.h
-
 /mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parameter.h
 string
 -
-
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parser.h
-vector
--
-Token.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Token.h
-Predicate.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Predicate.h
-Rule.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Rule.h
-Parameter.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parameter.h
-DatalogProgram.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/DatalogProgram.h
 
 /mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Predicate.h
 string
@@ -116,29 +78,9 @@ vector
 string
 -
 
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Token.h
-string
--
-
 /mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Tuple.h
 vector
 -
 string
 -
-
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/main.cpp
-iostream
--
-fstream
--
-Lexer.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Lexer.h
-Parser.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Parser.h
-Token.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Token.h
-Interpreter.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Interpreter.h
-Graph.h
-/mnt/c/Users/cppq/CLionProjects/CS_236_Project_5/Graph.h
 

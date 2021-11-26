@@ -42,12 +42,23 @@ int main(int argc, char** argv) {
     graph.createDependencyGraph(datalogProgram1.getRules());
     graph.createReverseDependencyGraph();
     vector<int> postOrder = graph.getPostOrderOnTree(graph.getReverseDependencyGraph());
+
+    /*cout << "\npost order: ";
+
+    for (auto i : postOrder) {
+        cout << i << " ";
+    }*/
+
     vector<map<int, set<int>>> SCCs = graph.getStronglyConnectedComponents();
     graph.PrintAdjacencyList();
     cout << endl << "Rule Evaluation" << endl;
+    /*cout << "\n\nSCCs:\n";
+
+    for (auto i : SCCs) {
+        graph.printSCCs(i);
+    }*/
     interpreter.evaluateAllRulesSCCs(SCCs);
 
-    //interpreter.evaluateAllRules();
     cout << endl;
     interpreter.evaluateAllQueries();
 

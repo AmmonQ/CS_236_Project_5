@@ -189,10 +189,12 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
             if (!rule.second.empty()) {
                 // make set of rules (least to greatest)
                 set<int> sccRules;
-                sccRules.insert(rule.first);
 
-                for (auto const &i: rule.second) {
-                    sccRules.insert(i);
+                for (auto const &i : scc) {
+                    sccRules.insert(i.first);
+                    for (auto const &j : i.second) {
+                        sccRules.insert(j);
+                    }
                 }
 
                 string output;
@@ -219,7 +221,7 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
 
                     int numPasses = 0;
 
-                    while (keepGoing) {
+                    do {
                         tempAfter2 = after;
                         tempBefore2 = before;
 
@@ -260,7 +262,7 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
                         if ((tempAfter2 == after) || (tempBefore2 == before)) {
                             keepGoing = false;
                         }
-                    }
+                    } while (keepGoing);
 
                     keepGoing = true;
 
@@ -271,7 +273,7 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
 
                     int numPasses = 0;
 
-                    while (keepGoing) {
+                    do {
                         tempAfter = after;
                         tempBefore = before;
 
@@ -313,7 +315,7 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
                         }
 
                         numPasses++;
-                    }
+                    } while (keepGoing);
 
                     keepGoing = true;
 
@@ -340,9 +342,7 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
 
                     int numPasses = 0;
 
-
-
-                    while (keepGoing) {
+                    do {
                         tempBeforeSelfLoop = before;
                         tempAfterSelfLoop = after;
                         before = after;
@@ -366,7 +366,7 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
                         if (((tempAfterSelfLoop == after) && (tempBeforeSelfLoop == before))) {
                             keepGoing = false;
                         }
-                    }
+                    } while (keepGoing);
 
                     keepGoing = true;
 
