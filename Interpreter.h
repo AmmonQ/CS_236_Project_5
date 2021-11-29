@@ -28,6 +28,7 @@ public:
     void evaluateAllRules();
 
     void evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs);
+    void evaluateRulesSCCs(vector<map<int, set<int>>> allSCCs);
 
     Rule getRuleFromNumber(int number);
 };

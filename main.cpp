@@ -57,7 +57,8 @@ int main(int argc, char** argv) {
     for (auto i : SCCs) {
         graph.printSCCs(i);
     }*/
-    interpreter.evaluateAllRulesSCCs(SCCs);
+    //interpreter.evaluateAllRulesSCCs(SCCs);
+    interpreter.evaluateRulesSCCs(SCCs);
 
     cout << endl;
     interpreter.evaluateAllQueries();

@@ -190,9 +190,9 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
                 // make set of rules (least to greatest)
                 set<int> sccRules;
 
-                for (auto const &i : scc) {
+                for (auto const &i: scc) {
                     sccRules.insert(i.first);
-                    for (auto const &j : i.second) {
+                    for (auto const &j: i.second) {
                         sccRules.insert(j);
                     }
                 }
@@ -384,6 +384,132 @@ void Interpreter::evaluateAllRulesSCCs(vector<map<int, set<int>>> allSCCs) {
                     myRelations.push_back(evaluateRule(getRuleFromNumber(rule.first), myScheme));
                     cout << "1 passes: R" << rule.first << endl;
                 }
+            }
+        }
+    }
+}
+
+void Interpreter::evaluateRulesSCCs(vector<map<int, set<int>>> allSCCs) {
+    for (auto const &scc: allSCCs) {
+        cout << "SCC: ";
+
+        set<int> sccRules;
+
+        for (auto const &i: scc) {
+            sccRules.insert(i.first);
+            for (auto const &j: i.second) {
+                sccRules.insert(j);
+            }
+        }
+
+        string output;
+
+        for (auto const &i: sccRules) {
+            output += "R" + to_string(i) + ",";
+        }
+
+        output.pop_back();
+        cout << output << endl;
+
+        bool keepGoing = true;
+        int before = 0;
+        int after = 0;
+        int numPasses = 0;
+        bool isSelfLoop = false;
+
+        for (auto const &r: scc) {
+            // check if it is a self loop
+            for (int i = 0; i < getRuleFromNumber(r.first).getPredicateListSize(); i++) {
+                if (getRuleFromNumber(r.first).getHeadPredicate().getName() == getRuleFromNumber(r.first).getPredicate(i).getName()) {
+                    isSelfLoop = true;
+                }
+            }
+
+            if (r.second.size() == 0 && !isSelfLoop) {
+                Predicate scheme;
+
+                for (int i = 0; i < datalogProgram.getSchemesSize(); i++) {
+                    if (datalogProgram.getScheme(i).getName() ==
+                        getRuleFromNumber(r.first).getHeadPredicate().getName()) {
+                        scheme = datalogProgram.getScheme(i);
+                    }
+                }
+
+                evaluateRule(getRuleFromNumber(r.first), scheme);
+
+                numPasses = 1;
+
+                cout << "1 passes: ";
+
+                cout << output << endl;
+            } else if (isSelfLoop && r.second.size() != 0) {
+                cout << endl << "IT'S A SELF LOOP!" << endl;
+                keepGoing = true;
+
+                before = 0;
+                after = 0;
+
+                while (keepGoing) {
+                    before += database.getTupleAmountInRelation(
+                            getRuleFromNumber(r.first).getHeadPredicate().getName());
+
+                    Predicate myScheme;
+
+                    for (int i = 0; i < datalogProgram.getSchemesSize(); i++) {
+                        if (datalogProgram.getScheme(i).getName() ==
+                            getRuleFromNumber(r.first).getHeadPredicate().getName()) {
+                            myScheme = datalogProgram.getScheme(i);
+                        }
+                    }
+
+                    evaluateRule(getRuleFromNumber(r.first), myScheme);
+                    after = database.getTupleAmountInRelation(
+                            getRuleFromNumber(r.first).getHeadPredicate().getName());
+
+                    numPasses++;
+
+                    after += database.getTupleAmountInRelation(
+                            getRuleFromNumber(r.first).getHeadPredicate().getName());
+
+                    if (before == after) {
+                        keepGoing = false;
+                    }
+                }
+
+                cout << numPasses << " passes: R" << r.first << endl;
+            } else {
+                while (keepGoing) {
+                    numPasses++;
+
+                    before = 0;
+                    after = 0;
+
+                    for (auto const &rule: sccRules) {
+                        before += database.getTupleAmountInRelation(
+                                getRuleFromNumber(rule).getHeadPredicate().getName());
+
+                        Predicate scheme;
+
+                        for (int i = 0; i < datalogProgram.getSchemesSize(); i++) {
+                            if (datalogProgram.getScheme(i).getName() ==
+                                getRuleFromNumber(rule).getHeadPredicate().getName()) {
+                                scheme = datalogProgram.getScheme(i);
+                            }
+                        }
+
+                        evaluateRule(getRuleFromNumber(rule), scheme);
+                        after += database.getTupleAmountInRelation(
+                                getRuleFromNumber(rule).getHeadPredicate().getName());
+                    }
+
+                    if (after == before) {
+                        keepGoing = false;
+                        cout << numPasses << " passes: ";
+                        cout << output << endl;
+                    }
+                }
+
+                sccRules.clear();
             }
         }
     }
